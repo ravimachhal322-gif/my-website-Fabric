@@ -1,0 +1,438 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+}
+
+.icons{
+    font-size:14px;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:8px;
+    font-size:13px;
+}
+
+/* ================= SECTION 1 (HERO GRID) ================= */
+.container{
+    padding:40px 60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:280px 280px;
+    gap:20px;
+}
+
+.box{
+    position:relative;
+    overflow:hidden;
+}
+
+.box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CENTER SALE IMAGE */
+.sale{
+    grid-row:1 / span 2;
+}
+
+.sale img{
+    filter:brightness(60%);
+}
+
+/* SALE CONTENT CENTER */
+.sale-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    color:#fff;
+    width:100%;
+}
+
+.sale-content h1{
+    font-size:90px;
+    letter-spacing:8px;
+    opacity:0.5;
+}
+
+.sale-content h2{
+    font-size:36px;
+    margin:10px 0 25px;
+}
+
+.sale-content button{
+    padding:12px 35px;
+    border:none;
+    background:#fff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ================= SECTION 2 (DEALS) ================= */
+.deals{
+    background:#2f2f2f;
+    color:#fff;
+    padding:60px;
+    display:flex;
+    gap:40px;
+}
+
+.deals-left{
+    width:35%;
+}
+
+.deals-left h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.deals-left p{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.deals-left button{
+    padding:10px 25px;
+    border:none;
+    margin-bottom:20px;
+    cursor:pointer;
+    border-radius: 40px;
+}
+.hurry{
+    margin-bottom:15px;
+}
+
+.timer{
+    display:flex;
+    gap:20px;
+}
+
+.timer div{
+    text-align:center;
+}
+
+.timer span{
+    display:block;
+    font-size:26px;
+    font-weight:bold;
+}
+
+/* DEAL IMAGES */
+.deals-right{
+    display:flex;
+    gap:20px;
+    align-items:flex-end;
+}
+
+.deals-right img{
+    object-fit:cover;
+}
+
+.deals-right img:nth-child(1){
+    width:260px;
+    height:360px;
+}
+
+.deals-right img:nth-child(2){
+    width:220px;
+    height:300px;
+}
+
+.deals-right img:nth-child(3){
+    width:180px;
+    height:260px;
+}
+@media(max-width:768px){
+    /* flex-direction:column; */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* SECTION */
+.arrivals{
+    padding:40px 20px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+/* HEADING */
+.arrivals h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+/* NAV BAR FIX */
+.arrivals-nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.arrivals-nav a{
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+    padding-bottom:5px;
+}
+
+.arrivals-nav a:hover{
+    border-bottom:2px solid #000;
+}
+
+/* ROW BOX */
+.arrivals-row{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:20px;
+    overflow-x:auto;   /* agar screen choti ho */
+    padding-bottom:10px;
+}
+
+/* CARD */
+.arrival-card{
+    min-width:180px;   /* sab ek row me rahenge */
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SAME SIZE */
+.arrival-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* TEXT */
+.arrival-card p{
+    padding:10px;
+    font-weight:600;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#111;
+}
+
+/* ================= HERO ================= */
+.hero{
+    background:#0f172a;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.brand{
+    color:#cbd5e1;
+    margin-bottom:10px;
+}
+.brand span{color:red;}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-desc{
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.hero-items{
+    margin-bottom:20px;
+}
+
+.price{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.old{text-decoration:line-through;color:gray;}
+.off{color:#22c55e;}
+
+.btn{
+    padding:12px 30px;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero-image img{
+    width:320px;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+    transition:.4s;
+}
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= INSTAGRAM ================= */
+.instagram{
+    padding:80px 5%;
+    text-align:center;
+}
+
+.insta-grid{
+    margin-top:2px;
+    width: 250px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+
+    grid-template-columns:repeat(5,1fr); 
+    gap:20px;
+ 
+}
+
+.insta-grid img{
+    width:100%;
+    transition:.4s;
+}
+.insta-grid img:hover{
+    transform:scale(1.08);
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter{
+    padding:80px 5%;
+    background:#f8fafc;
+}
+
+.news-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.news-image img{
+    width:320px;
+    border-radius: 50%;
+}
+
+.news-text input{
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+}
+
+.dark{
+    background:#000;
+    color:#fff;
+}
+.dark:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#1e293b;
+    color:#fff;
+    padding:60px 5% 30px;
+}
+
+.footer-cols{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    margin-top:30px;
+}
+
+.footer a{
+    display:block;
+    color:#cbd5e1;
+    margin:8px 0;
+    cursor:pointer;
+    transition:.3s;
+}
+.footer a:hover{
+    color:white;
+    transform:translateX(5px);
+}
+
+copyright{
+    text-align:center;
+    margin-top:30px;
+    font-size:14px;
+}
+
+
+    
+
+    
+
