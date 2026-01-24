@@ -1,438 +1,1462 @@
+/* ================= BASE RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 100;
+}
+
+.top-bar p {
+    animation: fadeInDown 0.8s ease-out;
 }
 
 /* ================= HEADER ================= */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    border-bottom:1px solid #ddd;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-}
-
-nav{
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#000;
-    font-size:14px;
-}
-
-.icons{
-    font-size:14px;
-}
-
-/* TOP BAR */
-.top-bar{
-    background:#000;
-    color:#fff;
-    text-align:center;
-    padding:8px;
-    font-size:13px;
-}
-
-/* ================= SECTION 1 (HERO GRID) ================= */
-.container{
-    padding:40px 60px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:280px 280px;
-    gap:20px;
-}
-
-.box{
-    position:relative;
-    overflow:hidden;
-}
-
-.box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* CENTER SALE IMAGE */
-.sale{
-    grid-row:1 / span 2;
-}
-
-.sale img{
-    filter:brightness(60%);
-}
-
-/* SALE CONTENT CENTER */
-.sale-content{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    text-align:center;
-    color:#fff;
-    width:100%;
-}
-
-.sale-content h1{
-    font-size:90px;
-    letter-spacing:8px;
-    opacity:0.5;
-}
-
-.sale-content h2{
-    font-size:36px;
-    margin:10px 0 25px;
-}
-
-.sale-content button{
-    padding:12px 35px;
-    border:none;
-    background:#fff;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-/* ================= SECTION 2 (DEALS) ================= */
-.deals{
-    background:#2f2f2f;
-    color:#fff;
-    padding:60px;
-    display:flex;
-    gap:40px;
-}
-
-.deals-left{
-    width:35%;
-}
-
-.deals-left h2{
-    font-size:26px;
-    margin-bottom:15px;
-}
-
-.deals-left p{
-    font-size:14px;
-    line-height:1.6;
-    margin-bottom:20px;
-}
-
-.deals-left button{
-    padding:10px 25px;
-    border:none;
-    margin-bottom:20px;
-    cursor:pointer;
-    border-radius: 40px;
-}
-.hurry{
-    margin-bottom:15px;
-}
-
-.timer{
-    display:flex;
-    gap:20px;
-}
-
-.timer div{
-    text-align:center;
-}
-
-.timer span{
-    display:block;
-    font-size:26px;
-    font-weight:bold;
-}
-
-/* DEAL IMAGES */
-.deals-right{
-    display:flex;
-    gap:20px;
-    align-items:flex-end;
-}
-
-.deals-right img{
-    object-fit:cover;
-}
-
-.deals-right img:nth-child(1){
-    width:260px;
-    height:360px;
-}
-
-.deals-right img:nth-child(2){
-    width:220px;
-    height:300px;
-}
-
-.deals-right img:nth-child(3){
-    width:180px;
-    height:260px;
-}
-@media(max-width:768px){
-    /* flex-direction:column; */
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* SECTION */
-.arrivals{
-    padding:40px 20px;
-    background:#f5f5f5;
-    text-align:center;
-}
-
-/* HEADING */
-.arrivals h2{
-    font-size:28px;
-    margin-bottom:15px;
-}
-
-/* NAV BAR FIX */
-.arrivals-nav{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:30px;
-    flex-wrap:wrap;
-}
-
-.arrivals-nav a{
-    text-decoration:none;
-    color:#000;
-    font-weight:600;
-    padding-bottom:5px;
-}
-
-.arrivals-nav a:hover{
-    border-bottom:2px solid #000;
-}
-
-/* ROW BOX */
-.arrivals-row{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    gap:20px;
-    overflow-x:auto;   /* agar screen choti ho */
-    padding-bottom:10px;
-}
-
-/* CARD */
-.arrival-card{
-    min-width:180px;   /* sab ek row me rahenge */
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* IMAGE SAME SIZE */
-.arrival-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-/* TEXT */
-.arrival-card p{
-    padding:10px;
-    font-weight:600;
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
-
-body{
-    background:#fff;
-    color:#111;
-}
-
-/* ================= HERO ================= */
-.hero{
-    background:#0f172a;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-}
-
-.hero-container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:#fff;
-}
-
-.hero-text{
-    width:50%;
-}
-
-.brand{
-    color:#cbd5e1;
-    margin-bottom:10px;
-}
-.brand span{color:red;}
-
-.hero h1{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.hero-desc{
-    color:#cbd5e1;
-    margin-bottom:15px;
-}
-
-.hero-items{
-    margin-bottom:20px;
-}
-
-.price{
-    display:flex;
-    gap:15px;
-    margin-bottom:25px;
-}
-
-.old{text-decoration:line-through;color:gray;}
-.off{color:#22c55e;}
-
-.btn{
-    padding:12px 30px;
-    border:none;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.hero-image img{
-    width:320px;
-    border-radius:12px;
-    box-shadow:0 20px 40px rgba(0,0,0,.5);
-    transition:.4s;
-}
-.hero-image img:hover{
-    transform:scale(1.05);
-}
-
-/* ================= INSTAGRAM ================= */
-.instagram{
-    padding:80px 5%;
-    text-align:center;
-}
-
-.insta-grid{
-    margin-top:2px;
-    width: 250px;
-    display:flex;
-    align-items:center;
+header {
+    display: flex;
     justify-content: space-between;
-
-    grid-template-columns:repeat(5,1fr); 
-    gap:20px;
- 
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid #eee;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
 }
 
-.insta-grid img{
-    width:100%;
-    transition:.4s;
-}
-.insta-grid img:hover{
-    transform:scale(1.08);
-}
-
-/* ================= NEWSLETTER ================= */
-.newsletter{
-    padding:80px 5%;
-    background:#f8fafc;
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: -1px;
+    transition: transform 0.3s ease;
 }
 
-.news-container{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:50px;
+.logo:hover {
+    transform: scale(1.05);
 }
 
-.news-image img{
-    width:320px;
+.logo span {
+    color: #ff4757;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff4757;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4757;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.header-icons i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px;
     border-radius: 50%;
 }
 
-.news-text input{
-    width:100%;
-    padding:12px;
-    margin:15px 0;
+.header-icons i:hover {
+    background: #f5f5f5;
+    transform: translateY(-3px);
 }
 
-.dark{
-    background:#000;
-    color:#fff;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
-.dark:hover{
-    background:#333;
+
+/* ================= HERO GRID SECTION ================= */
+.hero-grid-section {
+    padding: 60px 40px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 280px 280px;
+    gap: 25px;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.box:hover img {
+    transform: scale(1.05);
+}
+
+.sale {
+    grid-row: 1 / span 2;
+}
+
+.sale img {
+    filter: brightness(70%);
+}
+
+.sale-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+}
+
+.sale-content h1 {
+    font-size: 90px;
+    letter-spacing: 8px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sale-content h2 {
+    font-size: 36px;
+    margin: 10px 0 25px;
+    font-weight: 600;
+}
+
+.sale-content button {
+    padding: 14px 40px;
+    border: none;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sale-content button:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= DEALS SECTION ================= */
+.deals-section {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.deals {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.deals-left {
+    width: 40%;
+}
+
+.deals-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.deals-left p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.deals-left button {
+    padding: 14px 32px;
+    border: none;
+    background: #ff4757;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.deals-left button:hover {
+    background: #ff3742;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 71, 87, 0.3);
+}
+
+.hurry {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffd700;
+    font-weight: 600;
+}
+
+.timer {
+    display: flex;
+    gap: 25px;
+}
+
+.timer div {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 80px;
+    backdrop-filter: blur(5px);
+}
+
+.timer span {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.timer p {
+    font-size: 13px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.deals-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.deals-right img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.deals-right img:hover {
+    transform: translateY(-15px);
+}
+
+.deals-right img:nth-child(1) {
+    width: 260px;
+    height: 360px;
+}
+
+.deals-right img:nth-child(2) {
+    width: 220px;
+    height: 300px;
+}
+
+.deals-right img:nth-child(3) {
+    width: 180px;
+    height: 260px;
+}
+
+/* ================= NEW ARRIVALS ================= */
+.arrivals-section {
+    padding: 80px 40px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.arrivals-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.arrivals-nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.arrivals-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 8px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.arrivals-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff4757;
+    transition: width 0.3s ease;
+}
+
+.arrivals-nav a:hover {
+    color: #000;
+}
+
+.arrivals-nav a:hover::after {
+    width: 100%;
+}
+
+.arrivals-row {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 10px 40px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff4757 #f0f0f0;
+}
+
+.arrivals-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.arrivals-row::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.arrivals-row::-webkit-scrollbar-thumb {
+    background: #ff4757;
+    border-radius: 10px;
+}
+
+.arrival-card {
+    min-width: 250px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.arrival-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.arrival-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.arrival-card:hover img {
+    transform: scale(1.05);
+}
+
+.arrival-card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.arrival-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.arrival-card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.price-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 20px;
+    color: #222;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.cart-btn {
+    background: #000;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    background: #ff4757;
+    transform: rotate(15deg);
+}
+
+/* ================= FEATURED PRODUCT ================= */
+.featured-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 80px 40px;
+}
+
+.featured-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.featured-text {
+    width: 50%;
+}
+
+.brand {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.brand span {
+    color: #ff4757;
+}
+
+.featured-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.featured-desc {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.featured-items {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.price-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.current-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 22px;
+}
+
+.discount {
+    background: #22c55e;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    padding: 16px 40px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ff3742;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 71, 87, 0.3);
+}
+
+.btn-secondary {
+    padding: 16px 40px;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+.featured-image {
+    width: 45%;
+    position: relative;
+}
+
+.featured-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= INSTAGRAM SECTION ================= */
+.instagram-section {
+    padding: 80px 40px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.instagram-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.instagram-section p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 17px;
+}
+
+.insta-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.insta-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 300px;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 71, 87, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.insta-item:hover .insta-overlay {
+    opacity: 1;
+}
+
+.insta-icon {
+    color: white;
+    font-size: 32px;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter-section {
+    padding: 80px 40px;
+    background: #fff;
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: #f8fafc;
+    border-radius: 25px;
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.news-image {
+    width: 40%;
+}
+
+.news-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.news-text {
+    width: 60%;
+}
+
+.news-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.news-text p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.news-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.news-form input {
+    flex: 1;
+    padding: 18px 25px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.news-form input:focus {
+    outline: none;
+    border-color: #ff4757;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+}
+
+.btn-dark {
+    padding: 18px 40px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ================= FOOTER ================= */
-.footer{
-    background:#1e293b;
-    color:#fff;
-    padding:60px 5% 30px;
+footer {
+    background: #0f172a;
+    color: #fff;
+    padding: 80px 40px 30px;
 }
 
-.footer-cols{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:40px;
-    margin-top:30px;
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.footer a{
-    display:block;
-    color:#cbd5e1;
-    margin:8px 0;
-    cursor:pointer;
-    transition:.3s;
-}
-.footer a:hover{
-    color:white;
-    transform:translateX(5px);
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-bottom: 60px;
 }
 
-copyright{
-    text-align:center;
-    margin-top:30px;
-    font-size:14px;
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #fff;
 }
 
+.footer-col a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
 
+.footer-col a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #ff4757;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #ccc;
+}
+/* ================= ANIMATIONS ================= */
+
+/* Fade In Down */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= ELEMENT ANIMATIONS ================= */
+
+/* Top Bar Animation */
+.top-bar {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* Logo Animation */
+.logo {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Navigation Items Animation */
+nav a {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+nav a:nth-child(1) { animation-delay: 0.1s; }
+nav a:nth-child(2) { animation-delay: 0.2s; }
+nav a:nth-child(3) { animation-delay: 0.3s; }
+nav a:nth-child(4) { animation-delay: 0.4s; }
+nav a:nth-child(5) { animation-delay: 0.5s; }
+
+/* Grid Box Animation */
+.box {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.box:nth-child(1) { animation-delay: 0.1s; }
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.3s; }
+.box:nth-child(4) { animation-delay: 0.4s; }
+.box:nth-child(5) { animation-delay: 0.5s; }
+
+/* Sale Content Animation */
+.sale-content h1 {
+    animation: fadeInDown 1s ease-out 0.5s both;
+}
+
+.sale-content h2 {
+    animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+.sale-content button {
+    animation: fadeIn 1s ease-out 0.9s both;
+}
+
+/* Timer Animation */
+.timer div {
+    animation: pulse 2s infinite;
+}
+
+.timer div:nth-child(1) { animation-delay: 0s; }
+.timer div:nth-child(2) { animation-delay: 0.2s; }
+.timer div:nth-child(3) { animation-delay: 0.4s; }
+.timer div:nth-child(4) { animation-delay: 0.6s; }
+
+/* Deal Images Animation */
+.deals-right img {
+    animation: fadeInRight 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.deals-right img:nth-child(1) { animation-delay: 0.1s; }
+.deals-right img:nth-child(2) { animation-delay: 0.3s; }
+.deals-right img:nth-child(3) { animation-delay: 0.5s; }
+
+/* Arrival Cards Animation */
+.arrival-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.arrival-card:nth-child(1) { animation-delay: 0.1s; }
+.arrival-card:nth-child(2) { animation-delay: 0.2s; }
+.arrival-card:nth-child(3) { animation-delay: 0.3s; }
+.arrival-card:nth-child(4) { animation-delay: 0.4s; }
+.arrival-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Featured Section Animation */
+.featured-text {
+    animation: slideInLeft 1s ease-out;
+}
+
+.featured-image {
+    animation: slideInRight 1s ease-out;
+}
+
+/* Instagram Items Animation */
+.insta-item {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.insta-item:nth-child(1) { animation-delay: 0.1s; }
+.insta-item:nth-child(2) { animation-delay: 0.2s; }
+.insta-item:nth-child(3) { animation-delay: 0.3s; }
+.insta-item:nth-child(4) { animation-delay: 0.4s; }
+.insta-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Newsletter Animation */
+.news-image {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.news-text {
+    animation: fadeInRight 1s ease-out;
+}
+
+/* Footer Animation */
+.footer-col {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.footer-col:nth-child(1) { animation-delay: 0.1s; }
+.footer-col:nth-child(2) { animation-delay: 0.2s; }
+.footer-col:nth-child(3) { animation-delay: 0.3s; }
+.footer-col:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover Effects */
+.box:hover {
+    animation: pulse 0.5s ease;
+}
+
+button:hover {
+    animation: bounce 0.5s ease;
+}
+
+.cart-btn:hover {
+    animation: rotate 0.5s ease;
+}
+
+/* Scroll Animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: rotate 1s ease-in-out infinite;
+}
+/* ================= RESPONSIVE STYLES ================= */
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media (max-width: 1199px) {
+    header {
+        padding: 20px 40px;
+    }
     
-
+    .sale-content h1 {
+        font-size: 70px;
+    }
     
+    .deals {
+        gap: 40px;
+    }
+    
+    .featured-container {
+        gap: 40px;
+    }
+    
+    .featured-text h1 {
+        font-size: 40px;
+    }
+    
+    .insta-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .news-container {
+        gap: 50px;
+        padding: 40px;
+    }
+}
 
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+    /* Header */
+    header {
+        padding: 15px 30px;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Hero Grid */
+    .hero-grid-section {
+        padding: 40px 20px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 250px 250px 250px;
+    }
+    
+    .sale {
+        grid-row: 1 / span 2;
+    }
+    
+    .sale-content h1 {
+        font-size: 60px;
+    }
+    
+    .sale-content h2 {
+        font-size: 28px;
+    }
+    
+    /* Deals Section */
+    .deals-section {
+        padding: 60px 30px;
+    }
+    
+    .deals {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .deals-left {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .timer {
+        justify-content: center;
+    }
+    
+    .deals-right {
+        justify-content: center;
+    }
+    
+    /* Featured Section */
+    .featured-section {
+        padding: 60px 30px;
+    }
+    
+    .featured-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .featured-text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .featured-image {
+        width: 80%;
+    }
+    
+    /* Instagram */
+    .insta-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Newsletter */
+    .news-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .news-image, .news-text {
+        width: 100%;
+    }
+    
+    .news-form {
+        flex-direction: column;
+    }
+    
+    /* Footer */
+    .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Small Tablets and Large Phones (576px to 767px) */
+@media (max-width: 767px) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .header-icons {
+        gap: 15px;
+    }
+    
+    /* Hero Grid */
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+        gap: 15px;
+    }
+    
+    .sale {
+        grid-row: auto;
+    }
+    
+    .sale-content h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    
+    .sale-content h2 {
+        font-size: 24px;
+    }
+    
+    .sale-content button {
+        padding: 12px 30px;
+    }
+    
+    /* Deals Section */
+    .deals-section {
+        padding: 50px 20px;
+    }
+    
+    .deals-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .deals-right img:nth-child(1),
+    .deals-right img:nth-child(2),
+    .deals-right img:nth-child(3) {
+        width: 180px;
+        height: 250px;
+    }
+    
+    /* Arrivals */
+    .arrivals-section {
+        padding: 50px 20px;
+    }
+    
+    .arrivals-nav {
+        gap: 20px;
+    }
+    
+    .arrivals-nav a {
+        font-size: 14px;
+    }
+    
+    .arrival-card {
+        min-width: 200px;
+    }
+    
+    /* Featured */
+    .featured-text h1 {
+        font-size: 32px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Instagram */
+    .instagram-section {
+        padding: 50px 20px;
+    }
+    
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .insta-item {
+        height: 250px;
+    }
+    
+    /* Newsletter */
+    .newsletter-section {
+        padding: 50px 20px;
+    }
+    
+    .news-container {
+        padding: 30px;
+        border-radius: 15px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 50px 20px 20px;
+    }
+    
+    .footer-cols {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Small Phones (Up to 575px) */
+@media (max-width: 575px) {
+    /* Top Bar */
+    .top-bar {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    /* Hero Grid */
+    .hero-grid-section {
+        padding: 30px 15px;
+    }
+    
+    .grid {
+        grid-template-rows: repeat(5, 180px);
+    }
+    
+    .sale-content h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    
+    .sale-content h2 {
+        font-size: 20px;
+    }
+    
+    /* Deals Section */
+    .deals-left h2 {
+        font-size: 28px;
+    }
+    
+    .timer {
+        gap: 15px;
+    }
+    
+    .timer div {
+        min-width: 60px;
+        padding: 10px;
+    }
+    
+    .timer span {
+        font-size: 24px;
+    }
