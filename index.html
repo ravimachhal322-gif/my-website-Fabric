@@ -4,37 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabric Fashion</title>
-    <link rel="stylesheet" href="rahul11.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FABRIC - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        free shipping this week order over - $50
+        <p>FREE SHIPPING ON ALL ORDERS OVER $50</p>
     </div>
 
     <!-- Header -->
     <header>
-        <div class="logo">FABRIC</div> 
-
-        <nav class="main-nav">
-            <a href="#">Categories</a>
-            <a href="#">New Arrivals</a>
-            <a href="#">Deals</a>
+        <div class="logo">FABRIC<span>.</span></div>
+        
+        <!-- Desktop Navigation -->
+        <nav>
+            <a href="#">DESIGN</a>
+            <a href="#">JEWELLERY</a>
+            <a href="#">BLOG</a>
+            <a href="#">WATCHES</a>
+            <a href="#">TOPWEAR</a>
+            <a href="#">DENIM</a>
         </nav>
-
+        
+        <!-- Desktop Icons -->
         <div class="header-icons">
             <i class="fas fa-search"></i>
-            <i class="far fa-heart"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <span class="login-btn">Login</span>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
         </div>
         
-        <div class="menu-toggle">
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle">
             <i class="fas fa-bars"></i>
-        </div>
+        </button>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">FABRIC<span>.</span></div>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-nav">
+            <a href="#">DESIGN</a>
+            <a href="#">JEWELLERY</a>
+            <a href="#">BLOG</a>
+            <a href="#">WATCHES</a>
+            <a href="#">TOPWEAR</a>
+            <a href="#">DENIM</a>
+        </div>
+        
+        <div class="mobile-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </div>
+
+    <!-- Rest of your HTML content -->
+    
+    
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
+</head>
+
+<body>
+    
 
     <!-- ================= SECTION 1: HERO GRID ================= -->
     <section class="hero-grid-section">
@@ -344,7 +424,7 @@
 
             <div class="footer-bottom">
                 <p class="copyright">
-                    © 2025 Fabric Textiles. All Rights Reserved
+                    © 2026 Fabric. All Rights Reserved
                 </p>
                 <div class="payment-methods">
                     <i class="fab fa-cc-visa"></i>
